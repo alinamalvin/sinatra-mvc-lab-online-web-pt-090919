@@ -4,6 +4,15 @@ class TextAnalyzer
   def initialize(text)
     @text = text.downcase
   end
+  
+  def piglatinize(string)
+    a = string.split(" ")
+    b = a.map {|word| piglatinize_word(word)}
+    b.join(" ")
+end
+
+
+
  
   def count_of_words
     words = text.split(" ")
